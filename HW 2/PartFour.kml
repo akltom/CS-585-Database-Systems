@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+<Folder>
+	<name>Temporary Places</name>
+	<open>1</open>
+	<Document>
+		<name>PartFourOnePolygon.kml</name>
+		<Style id="z1">
+			<IconStyle>
+				<Icon>
+					<href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Style id="transYellowPoly">
+			<LineStyle>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7d00ffff</color>
+			</PolyStyle>
+		</Style>
+		<Placemark>
+			<name>My Apartment</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2930253770832,34.02213045745779,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Expo. Vermont</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2913199203383,34.01841231888076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Vermont Jeff.</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2913501083079,34.02538924143019,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Figu. Expo.</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2823107824859,34.01847795151199,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Jeff. Figu.</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2803577256414,34.02187790063296,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KleinSmid Cen.</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2843176568676,34.02137409645614,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cromwell Field</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2877846117797,34.02230363506409,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SandE Library</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2895262860397,34.01980364229731,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Doheny Library</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.283691805504,34.01990009483026,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Music School</name>
+			<styleUrl>#z1</styleUrl>
+			<Point>
+				<coordinates>-118.2853001011877,34.02307714181323,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Poly</name>
+			<styleUrl>#transYellowPoly</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-118.291319920338,34.0184123188808,20 -118.293025377083,34.0221304574578,20 -118.291350108308,34.0253892414302,20 -118.280357725641,34.021877900633,20 -118.282310782486,34.018477951512,20 -118.291319920338,34.0184123188808,20 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Document>
+	<Document>
+		<name>PartThreePlacemarks.kml</name>
+		<Style id="z10">
+			<IconStyle>
+				<Icon>
+					<href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Placemark>
+			<name>My Apartment</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2930253770832,34.02213045745779,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Expo. Vermont</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2913199203383,34.01841231888076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Vermont Jeff.</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2913501083079,34.02538924143019,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Figu. Expo.</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2823107824859,34.01847795151199,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Jeff. Figu.</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2803577256414,34.02187790063296,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KleinSmid Cen.</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2843176568676,34.02137409645614,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cromwell Field</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2877846117797,34.02230363506409,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SandE Library</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2895262860397,34.01980364229731,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Doheny Library</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.283691805504,34.01990009483026,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Music School</name>
+			<styleUrl>#z10</styleUrl>
+			<Point>
+				<coordinates>-118.2853001011877,34.02307714181323,0</coordinates>
+			</Point>
+		</Placemark>
+	</Document>
+	<Document>
+		<name>PartFourTwoPolygons.kml</name>
+		<Style id="transYellowPoly0">
+			<LineStyle>
+				<width>1.5</width>
+			</LineStyle>
+			<PolyStyle>
+				<color>7d00ffff</color>
+			</PolyStyle>
+		</Style>
+		<Style id="z11">
+			<IconStyle>
+				<Icon>
+					<href>http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png</href>
+				</Icon>
+			</IconStyle>
+		</Style>
+		<Placemark>
+			<name>My Apartment</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2930253770832,34.02213045745779,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Expo. Vermont</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2913199203383,34.01841231888076,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Vermont Jeff.</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2913501083079,34.02538924143019,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Figu. Expo.</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2823107824859,34.01847795151199,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Jeff. Figu.</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2803577256414,34.02187790063296,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>KleinSmid Cen.</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2843176568676,34.02137409645614,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Cromwell Field</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2877846117797,34.02230363506409,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>SandE Library</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2895262860397,34.01980364229731,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Doheny Library</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.283691805504,34.01990009483026,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>Music School</name>
+			<styleUrl>#z11</styleUrl>
+			<Point>
+				<coordinates>-118.2853001011877,34.02307714181323,0</coordinates>
+			</Point>
+		</Placemark>
+		<Placemark>
+			<name>PolyOne</name>
+			<styleUrl>#transYellowPoly0</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-118.2930253770832,34.02213045745779,20 -118.2913199203383,34.01841231888076,20 -118.2895262860397,34.01980364229731,20 -118.283691805504,34.01990009483026,20 -118.2853001011877,34.02307714181323,20 -118.2930253770832,34.02213045745779,20 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+		<Placemark>
+			<name>PolyTwo</name>
+			<styleUrl>#transYellowPoly0</styleUrl>
+			<Polygon>
+				<extrude>1</extrude>
+				<altitudeMode>relativeToGround</altitudeMode>
+				<outerBoundaryIs>
+					<LinearRing>
+						<coordinates>
+							-118.2913501083079,34.02538924143019,20 -118.2877846117797,34.02230363506409,20 -118.2823107824859,34.01847795151199,20 -118.2803577256414,34.02187790063296,20 -118.2843176568676,34.02137409645614,20 -118.2913501083079,34.02538924143019,20 
+						</coordinates>
+					</LinearRing>
+				</outerBoundaryIs>
+			</Polygon>
+		</Placemark>
+	</Document>
+</Folder>
+</kml>
