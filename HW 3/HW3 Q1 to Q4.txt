@@ -1,0 +1,111 @@
+Q1 to Q4
+
+Q1
+
+// Queries
+
+graph = TinkerGraph.open()
+v101 = graph.addVertex(id, "CS101")
+v201 = graph.addVertex(id, "CS201")
+v220 = graph.addVertex(id, "CS220")
+v334 = graph.addVertex(id, "CS334")
+v400 = graph.addVertex(id, "CS400")
+v420 = graph.addVertex(id, "CS420")
+v526 = graph.addVertex(id, "CS526")
+v681 = graph.addVertex(id, "CS681")
+
+v201.addEdge("prereq", v101)
+v220.addEdge("prereq", v201)
+v334.addEdge("prereq", v201)
+v420.addEdge("prereq", v220)
+v681.addEdge("prereq", v334)
+v400.addEdge("prereq", v334)
+v526.addEdge("prereq", v400)
+
+v526.addEdge("coreq", v400)
+v420.addEdge("coreq", v220)
+g = graph.traversal()
+
+// Commands
+
+In the first line, I created a new in-memory TinkerGraph, and assigned it to 
+the variable graph. For the next eight lines, I created 8 vertexes in this graph, 
+and assigned an id for them respectively. Since we want the output display the 
+cources number, so I named them "CSXXX" as id respectively. In addition, I named 
+"vXXX" for the vertexes.
+
+Similar with the vertexes, I created 9 edges for this graph. 7 edges for the 
+regular edges with pre-req relationship; 2 edges for the specific edges with
+co-req relationship. Since the edges are pointed from upper level classes to
+lower level classes, so I assigned the upper level classes' vertexes to lower
+level classes' vertexes. Finally, I created a graph traversal source from the 
+graph using the standard OLTP traversal engine.
+
+
+Q2
+
+// Query
+
+g.V().as('a').where(outE().count().is(gte(2))).outE('coreq').inV().as('b').order().by(id,decr).select('a','b')
+
+// Commands
+
+g.V() means from all the vertexes. First, I select vertex(s) that has 2 outgoing 
+edges, and I set that vertex(s) as 'a'. In this problem, only CS526 and CS420 can
+be satisfied this condition. Now, CS526 and CS420 are displayed twice because each 
+of them has two outgoing edges respectively. Then, I have to find the course that 
+is the prereq of CS526, and CS420 respectively. So I put .outE('coreq') and .inV() 
+to get the vertex'b', which output the previous course of CS526 and CS420. I use 
+.outE('coreq') to filter the extra edge of 'prereq', so that the output will only
+display the vertexes once, which the vertexes are between the one edge of 'coreq'.
+Finally, since I insert the cources based on alphabetical order in problem 1, so
+I re-order the id in decreasing order for display purpose.
+
+In addition, If we want to test vertex that has 1 outgoing edge, we can just 
+change from gte(2) to gte(1), and change to 'prereq' condition from .outE('coreq')
+to .outE('prereq'). 
+Similarly, if we want to test 2 outgoing edges with 'prereq' condition, we can 
+just change from .outE('coreq') to .outE('prereq'), which in this case the output 
+will be the same with my solution.
+
+
+
+Q3
+
+// Query
+
+g.V("CS526").repeat(out().as('a')).until(outE().count().is(0)).path().select('a').limit(1).unfold()
+
+// Commands
+
+In this problem, we want to find all the prereqs of CS526. So, we start from vertex
+CS526, g.V("CS526"). Then, I find the all outgoing vertexes repeatly until the 
+outgoing edge in that path is zero. This is what 
+.repeat(out().as('a')).until(outE().count().is(0)).path() code is doing. I mark 
+all these prereq courses as 'a', and display them with .select('a'). Since 
+CS526 has two path that go to CS101(One path from prereq, and one path from coreq),
+so I put .limit(1) to filter and display the ancestors only one time. Finally, 
+since the current output has to be displayed in a single line, so I use .unfold() 
+to break down into several lines for display purpose. 
+
+
+Q4
+
+// Query
+
+g.V("CS101").repeat(__.in()).emit().path().count(local).max()
+
+// Commands
+
+In this problem, I want to find the max depth starting from a given node (CS101
+for this problem). So I start by choosing the vertex CS101: g.V("CS101"). Then,
+__.in() is a anonymous traversal, it basically means all the possible incoming
+vertexes. I put the emit() after repeat() because it is evaluated on the traversers 
+leaving the repeat-traversal. So, g.V("CS101").repeat(__.in()).emit() will output
+all the incoming vertexes, with CS526 and CS420 show up twice. Since I want to get 
+the depth of along the paths, so I add .path(). When I use it, the program 
+will output all the incoming edges from different paths. Then, I use .count(local) 
+to count the current local object, the output will then display the depth of 
+each path. Finally, I use.max() to get the maximum depth among all of the paths.
+
+

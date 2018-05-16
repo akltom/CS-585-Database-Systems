@@ -1,0 +1,77 @@
+Extra Credit
+
+Part A
+
+// Queries
+
+graph = TinkerGraph.open()
+v1 = graph.addVertex(id, "Region1")
+v2 = graph.addVertex(id, "Region2")
+v3 = graph.addVertex(id, "Region3")
+v4 = graph.addVertex(id, "Region4")
+
+v2.addEdge("Bridge1a", v1)
+v1.addEdge("Bridge1b", v2)
+
+v2.addEdge("Bridge2a", v1)
+v1.addEdge("Bridge2b", v2)
+
+v2.addEdge("Bridge3a", v3)
+v3.addEdge("Bridge3b", v2)
+
+v2.addEdge("Bridge4a", v3)
+v3.addEdge("Bridge4b", v2)
+
+v1.addEdge("Bridge5a", v4)
+v4.addEdge("Bridge5b", v1)
+
+v2.addEdge("Bridge6a", v4)
+v4.addEdge("Bridge6b", v2)
+
+v4.addEdge("Bridge7a", v3)
+v3.addEdge("Bridge7b", v4)
+g = graph.traversal()
+
+// Commands
+
+Similar with problem number 1, the above codes are the creation of the graph,which
+consists of the creation of vertexes, and the creation of the edges. The vertexes
+v1, v2, v3, and v4 represents the top, middle, bottom, and the right edge(region)
+for the city of Konigsberg. The edges "BridgeXY" means the edge(bridge) across the
+city. 
+
+
+Part B
+
+// Query
+
+g.V().out().groupCount().unfold().map{it.get().value%2}.max().choose(__.is(eq(1)),constant(false),constant(true))
+
+// Commands
+
+g.V().out().groupCount() basically traverses from all the vertexes, and display
+the number of edges that each vertex can go through respectively. The .unfold() 
+breakdowns the output into several line, where each vertex displays it's count 
+per one line. The .map{it.get().value%2} is a test to see whether if the number 
+of edges are odd or even, if the number of edges is odd, we will take it's 
+remainder of 1; if the number of edges is even, we will take it's remainder of 0. 
+The .max() is a determination to check whether if there is at least one remainder 
+of 1 exists, which mean to check if there is at least one odd number exists. If 
+there are at least one 1 exists, we takes the max, and mark it down; otherwise if 
+no any odd number, .max() will display 0. Finally, 'choose' is a specific 
+boolean-based function, I use it along with 'constant' function, if there are at 
+least one odd number, then the final output will display 'false', if all remainders 
+are 0, then the output will display 'true'.
+
+
+
+
+
+
+
+
+
+
+
+
+
